@@ -65,7 +65,7 @@ const Footer = () => (
     </div>
 
     <div className="footer-bottom">
-      <span>© {new Date().getFullYear()} Tilahun Tareke. All rights reserved.</span>
+      <span>© {new Date().getFullYear()} Elias Ferhan. All rights reserved.</span>
       <span className="footer-made">Built with React and vite</span>
     </div>
   </footer>

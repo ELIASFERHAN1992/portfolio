@@ -4,7 +4,7 @@ Personal portfolio website showcasing my projects, skills, and experience as a F
 
 ## Live 
 
-https://my-portfolio-website-t95e.onrender.com
+
 ## Tech Stack
 
 - React 19

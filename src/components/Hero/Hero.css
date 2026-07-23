@@ -1,0 +1,282 @@
+/* ── Hero ────────────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 120px var(--section-x) 72px;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 52px;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* ── Copy ────────────────────────────────────────────────────── */
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.hero-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 2px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.hero-copy .greeting {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-2);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  color: var(--text-main);
+}
+
+.hero-copy h1 .name {
+  background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title-label {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.hero-value {
+  font-size: var(--text-base);
+  color: var(--text-body);
+  line-height: 1.75;
+  max-width: 500px;
+}
+
+/* ── Meta badges ─────────────────────────────────────────────── */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.hero-meta-icon {
+  color: var(--accent-2);
+  font-size: 0.8rem;
+}
+
+/* ── CTA buttons ─────────────────────────────────────────────── */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 26px;
+  border-radius: 50px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+              background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+  cursor: pointer;
+}
+
+/* Filled — Hire Me */
+.hero-btn--primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 18px rgba(var(--accent-rgb), 0.28);
+}
+.hero-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.42);
+}
+
+/* Telegram — Quick Contact */
+.hero-btn--telegram {
+  background: #0088cc;
+  color: #ffffff;
+  border: 2px solid #0088cc;
+  box-shadow: 0 4px 14px rgba(0, 136, 204, 0.28);
+}
+.hero-btn--telegram:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 136, 204, 0.42);
+}
+
+/* Outline — View Projects */
+.hero-btn--outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--bg), var(--bg)),
+                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.hero-btn--outline:hover {
+  background-image: linear-gradient(135deg, var(--accent), var(--accent-2)),
+                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Premium Resume Button */
+.hero-btn--resume {
+  background: var(--surface);
+  color: var(--text-main);
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--surface), var(--surface)),
+                    linear-gradient(135deg, var(--accent-2), var(--accent));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 4px 14px rgba(var(--accent-rgb), 0.16);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn--resume .btn-icon {
+  font-size: 0.92rem;
+  color: var(--accent-2);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.hero-btn--resume:hover {
+  background-image: linear-gradient(135deg, var(--accent-2), var(--accent)),
+                    linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.38);
+}
+
+.hero-btn--resume:hover .btn-icon {
+  color: #ffffff;
+  transform: translateY(2px);
+}
+
+/* ── Profile image ───────────────────────────────────────────── */
+.hero-img-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-img {
+  width: clamp(200px, 22vw, 280px);
+  height: clamp(200px, 22vw, 280px);
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  border: 3px solid rgba(var(--accent-rgb), 0.35);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-img-glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  opacity: 0.35;
+  filter: blur(16px);
+  z-index: 1;
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.hero-img-wrapper:hover .hero-img {
+  transform: scale(1.04);
+}
+
+.hero-img-wrapper:hover .hero-img-glow {
+  opacity: 0.65;
+  filter: blur(22px);
+}
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 56px;
+  }
+  .hero-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+  .hero-img {
+    width: 148px;
+    height: 148px;
+  }
+  .hero-copy {
+    align-items: center;
+  }
+  .hero-value {
+    max-width: 100%;
+  }
+  .hero-meta {
+    justify-content: center;
+  }
+  .hero-cta {
+    justify-content: center;
+  }
+}

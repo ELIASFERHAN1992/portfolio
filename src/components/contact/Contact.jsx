@@ -3,7 +3,7 @@ import "./Contact.css";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaTelegram, FaCopy, FaCheck } from "react-icons/fa";
 
 const CONTACT_DETAILS = [
-  { icon: <FaEnvelope />, label: "Email",    text: "eliasferhan@gmail.com", href: "mailto:eliasferhan@gmail.com", copyText: "eliasferhan@gmail.com" },
+  { icon: <FaEnvelope />, label: "Email",    text: "eliasferhan1992@gmail.com", href: "mailto:eliasferhan1992@gmail.com", copyText: "eliasferhan1992@gmail.com" },
   { icon: <FaPhone />,    label: "Phone",    text: "+251 967290180",         href: "tel:+251967290180", copyText: "+251967290180" },
   { icon: <FaTelegram />, label: "Telegram", text: "@Painkiller_2312",       href: "https://t.me/Painkiller_2312", copyText: "https://t.me/Painkiller_2312" },
   { icon: <FaMapMarkerAlt />, label: "Location", text: "Addis Ababa, Ethiopia" },
